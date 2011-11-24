@@ -1,0 +1,37 @@
+---
+abstract: 'Handle values with tags and validity ranges'
+author:
+  - 'Gianni Ceccarelli <dakkar@thenautilus.net>'
+build_requires:
+  Data::Printer: 0
+  JSON::XS: 0
+  Test::More: 0
+  Test::Most: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.112621'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Data-MultiValued
+no_index:
+  directory:
+    - t/lib
+requires:
+  Carp: 0
+  Moose: 0
+  Moose::Meta::Method::Accessor: 0
+  Moose::Role: 0
+  Moose::Util::TypeConstraints: 0
+  MooseX::Params::Validate: 0
+  MooseX::Types::Moose: 0
+  MooseX::Types::Structured: 0
+  Throwable::Error: 0
+  Try::Tiny: 0
+  base: 0
+  namespace::autoclean: 0
+  strict: 0
+  warnings: 0
+version: 0.0.1_1
