@@ -1,6 +1,6 @@
 package Data::MultiValued::RangeContainer;
 {
-  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_1';
+  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::RangeContainer::DIST = 'Data-MultiValued';
@@ -78,9 +78,9 @@ sub _partition_slots {
     my (@before,@overlap,@after);
     my $st=$self->_storage;
 
-    keys @$st;
+    for my $idx (0..$#$st) {
+        my $slot = $st->[$idx];
 
-    while (my ($idx,$slot) = each @$st) {
         my ($sf,$st) = @$slot{'from','to'};
 
         if (_cmp($st,$from,1,0) <0) {
@@ -243,7 +243,7 @@ Data::MultiValued::RangeContainer - container for ranged values
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 DESCRIPTION
 
@@ -267,8 +267,8 @@ C<from> C<to> C<value>.
   my $value = $obj->get({ at => $point });
 
 Retrieves the range that includes the given point. Throws a
-L<Data::MultiValued::Exceptions::RangeNotFound> exception if no range
-includes the point.
+L<Data::MultiValued::Exceptions::RangeNotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::RangeNotFound>
+exception if no range includes the point.
 
 =head2 C<get_or_create>
 
@@ -276,8 +276,9 @@ includes the point.
 
 Retrieves the range that has the given extremes. If no such range
 exists, creates a new range, splicing any existing overlapping range,
-and returns it. Throws L<Data::MultiValued::Exceptions::BadRange> if
-C<< $min > $max >>.
+and returns it. Throws
+L<Data::MultiValued::Exceptions::BadRange|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::BadRange>
+if C<< $min > $max >>.
 
 =head2 C<clear>
 
@@ -288,7 +289,9 @@ exists, splices any existing overlapping range so that C<<
 $obj->get({at => $point }) >> for any C<< $min <= $point < $max >>
 will die.
 
-Throws L<Data::MultiValued::Exceptions::BadRange> if C<< $min > $max >>.
+Throws
+L<Data::MultiValued::Exceptions::BadRange|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::BadRange>
+if C<< $min > $max >>.
 
 =head2 C<all_ranges>
 
@@ -303,7 +306,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

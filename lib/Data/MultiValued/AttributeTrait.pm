@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeTrait;
 {
-  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_1';
+  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::AttributeTrait::DIST = 'Data-MultiValued';
@@ -285,7 +285,7 @@ Data::MultiValued::AttributeTrait - "base role" for traits of multi-valued Moose
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 DESCRIPTION
 
@@ -338,7 +338,7 @@ C<$name> is the attribute name.
 
 The names to use for the various additional accessors. See
 L<Class::MOP::Attribute> for details. These default to
-C<"multi_$name"> where C<$name> is the name of the corresponding
+C<"${name}_multi"> where C<$name> is the name of the corresponding
 non-multi accessor. So, for example,
 
   has stuff => (
@@ -412,9 +412,10 @@ Retrieves a value from the multi-value object, and stores it in the
 regular slot in the instance. If the value is not found, clears the
 slot.
 
-This traps the L<Data::MultiValued::Exceptions::NotFound> exception
-that may be thrown by the multi-value object, but re-throws any other
-exception.
+This traps the
+L<Data::MultiValued::Exceptions::NotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::NotFound>
+exception that may be thrown by the multi-value object, but re-throws
+any other exception.
 
 =head2 C<raw_clear_value>
 
@@ -492,7 +493,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -1,6 +1,6 @@
 package Data::MultiValued::Ranges;
 {
-  $Data::MultiValued::Ranges::VERSION = '0.0.1_1';
+  $Data::MultiValued::Ranges::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::Ranges::DIST = 'Data-MultiValued';
@@ -89,7 +89,7 @@ Data::MultiValued::Ranges - Handle values with validity ranges
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -111,7 +111,8 @@ version 0.0.1_1
   $obj->set({ from => $min, to => $max, value => $the_value });
 
 Stores the given value for the given range. Throws
-L<Data::MultiValued::Exceptions::BadRange> if C<< $min > $max >>.
+L<Data::MultiValued::Exceptions::BadRange|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::BadRange>
+if C<< $min > $max >>.
 
 The range is defined as C<< Num $x : $min <= $x < $max >>. A C<< from
 => undef >> means "from -Inf", and a C<< to => undef >> means "to
@@ -143,9 +144,9 @@ just stored.
   my $value = $obj->get({ at => $point });
 
 Retrieves the value for the given point. Throws a
-L<Data::MultiValued::Exceptions::RangeNotFound> exception if no ranges
-exist in this object that include the point (remember that a range
-does not include its C<to> point).
+L<Data::MultiValued::Exceptions::RangeNotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::RangeNotFound>
+exception if no ranges exist in this object that include the point
+(remember that a range does not include its C<to> point).
 
 A C<< at => undef >> means "at -Inf". Not passing in C<at> is
 equivalent to passing C<undef>.
@@ -158,7 +159,8 @@ untouched.
   $obj->clear({ from => $min, to => $max });
 
 Deletes all values for the given range. Throws
-L<Data::MultiValued::Exceptions::BadRange> if C<< $min > $max >>.
+L<Data::MultiValued::Exceptions::BadRange|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::BadRange>
+if C<< $min > $max >>.
 
 A C<< from => undef >> means "from -Inf", and a C<< to => undef >>
 means "to +Inf". Not passing in C<from> or C<to> is equivalent to
@@ -203,7 +205,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

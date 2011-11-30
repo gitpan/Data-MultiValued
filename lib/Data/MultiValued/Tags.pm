@@ -1,6 +1,6 @@
 package Data::MultiValued::Tags;
 {
-  $Data::MultiValued::Tags::VERSION = '0.0.1_1';
+  $Data::MultiValued::Tags::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::Tags::DIST = 'Data-MultiValued';
@@ -86,7 +86,7 @@ Data::MultiValued::Tags - Handle values with tags
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -120,8 +120,8 @@ just stored.
   my $value = $obj->get({ tag => $the_tag });
 
 Retrieves the value for the given tag. Throws a
-L<Data::MultiValued::Exceptions::TagNotFound> exception if the tag
-does not exists in this object.
+L<Data::MultiValued::Exceptions::TagNotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::TagNotFound>
+exception if the tag does not exists in this object.
 
 Not passing in a C<tag> is equivalent to passing in C<< tag => undef
 >>.
@@ -163,7 +163,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

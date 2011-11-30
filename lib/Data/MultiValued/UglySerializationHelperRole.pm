@@ -1,6 +1,6 @@
 package Data::MultiValued::UglySerializationHelperRole;
 {
-  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_1';
+  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::UglySerializationHelperRole::DIST = 'Data-MultiValued';
@@ -54,7 +54,7 @@ Data::MultiValued::UglySerializationHelperRole - only use this if you know what 
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -132,7 +132,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

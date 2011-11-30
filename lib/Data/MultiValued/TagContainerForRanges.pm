@@ -1,6 +1,6 @@
 package Data::MultiValued::TagContainerForRanges;
 {
-  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_1';
+  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::TagContainerForRanges::DIST = 'Data-MultiValued';
@@ -63,7 +63,7 @@ Data::MultiValued::TagContainerForRanges - container for tagged values that are 
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 DESCRIPTION
 
@@ -100,7 +100,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

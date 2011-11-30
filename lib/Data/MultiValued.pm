@@ -1,6 +1,6 @@
 package Data::MultiValued;
 {
-  $Data::MultiValued::VERSION = '0.0.1_1';
+  $Data::MultiValued::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::DIST = 'Data-MultiValued';
@@ -23,7 +23,7 @@ Data::MultiValued - store tag- and range-dependant data in a scalar or Moose att
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -98,7 +98,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

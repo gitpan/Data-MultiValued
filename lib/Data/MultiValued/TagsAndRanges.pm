@@ -1,6 +1,6 @@
 package Data::MultiValued::TagsAndRanges;
 {
-  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_1';
+  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::TagsAndRanges::DIST = 'Data-MultiValued';
@@ -99,7 +99,7 @@ Data::MultiValued::TagsAndRanges - Handle values with tags and validity ranges
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -133,10 +133,11 @@ L<Data::MultiValued::Ranges/set> for more details.
   my $value = $obj->get({ tag => $the_tag, at => $point });
 
 Retrieves the value for the given tag and point. Throws a
-L<Data::MultiValued::Exceptions::RangeNotFound> exception if no ranges
-exist in this object that include the point, and
-L<Data::MultiValued::Exceptions::TagNotFound> exception if the tag
-does not exists in this object.
+L<Data::MultiValued::Exceptions::RangeNotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::RangeNotFound>
+exception if no ranges exist in this object that include the point,
+and
+L<Data::MultiValued::Exceptions::TagNotFound|Data::MultiValued::Exceptions/Data::MultiValued::Exceptions::TagNotFound>
+exception if the tag does not exists in this object.
 
 See L<Data::MultiValued::Tags/get> and
 L<Data::MultiValued::Ranges/get> for more details.
@@ -175,7 +176,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

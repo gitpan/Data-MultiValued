@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeTrait::Tags;
 {
-  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_1';
+  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_2';
 }
 {
   $Data::MultiValued::AttributeTrait::Tags::DIST = 'Data-MultiValued';
@@ -18,7 +18,7 @@ sub opts_to_pass_get { qw(tag) }
 
 package Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags;
 {
-  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_1';
+  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_2';
 }
 {
   $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::DIST = 'Data-MultiValued';
@@ -37,7 +37,7 @@ Data::MultiValued::AttributeTrait::Tags - attribute traits for attributes holdin
 
 =head1 VERSION
 
-version 0.0.1_1
+version 0.0.1_2
 
 =head1 SYNOPSIS
 
@@ -78,7 +78,7 @@ Gianni Ceccarelli <dakkar@thenautilus.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Net-a-porter.com.
+This software is copyright (c) 2011 by Net-a-Porter.com.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

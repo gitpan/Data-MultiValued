@@ -1,4 +1,7 @@
 Revision history for Data::MultiValued
 
+0.0.1_2   2011-11-30 11:01:47 Europe/London
+  - remove the need for perl 5.12
+
 0.0.1_1   2011-11-24 17:59:57 Europe/London
   - first working version
