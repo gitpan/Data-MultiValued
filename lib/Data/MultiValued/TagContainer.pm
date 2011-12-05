@@ -1,6 +1,6 @@
 package Data::MultiValued::TagContainer;
 {
-  $Data::MultiValued::TagContainer::VERSION = '0.0.1_2';
+  $Data::MultiValued::TagContainer::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::TagContainer::DIST = 'Data-MultiValued';
@@ -115,13 +115,15 @@ sub _create_new_inferior {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::TagContainer - container for tagged values
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 

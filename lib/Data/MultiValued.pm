@@ -1,6 +1,6 @@
 package Data::MultiValued;
 {
-  $Data::MultiValued::VERSION = '0.0.1_2';
+  $Data::MultiValued::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::DIST = 'Data-MultiValued';
@@ -17,13 +17,15 @@ warn "Don't use this module directly, use Data::MultiValued::Tags or Data::Multi
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued - store tag- and range-dependant data in a scalar or Moose attribute
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 SYNOPSIS
 

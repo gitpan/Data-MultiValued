@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeTrait::Ranges;
 {
-  $Data::MultiValued::AttributeTrait::Ranges::VERSION = '0.0.1_2';
+  $Data::MultiValued::AttributeTrait::Ranges::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::AttributeTrait::Ranges::DIST = 'Data-MultiValued';
@@ -18,7 +18,7 @@ sub opts_to_pass_get { qw(at) }
 
 package Moose::Meta::Attribute::Custom::Trait::MultiValued::Ranges;
 {
-  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Ranges::VERSION = '0.0.1_2';
+  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Ranges::VERSION = '0.0.1_3';
 }
 {
   $Moose::Meta::Attribute::Custom::Trait::MultiValued::Ranges::DIST = 'Data-MultiValued';
@@ -31,13 +31,15 @@ sub register_implementation { 'Data::MultiValued::AttributeTrait::Ranges' }
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::AttributeTrait::Ranges - attribute traits for attributes holding ranged values
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 SYNOPSIS
 

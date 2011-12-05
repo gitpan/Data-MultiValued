@@ -1,6 +1,6 @@
 package Data::MultiValued::UglySerializationHelperRole;
 {
-  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_2';
+  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::UglySerializationHelperRole::DIST = 'Data-MultiValued';
@@ -48,13 +48,15 @@ sub as_hash {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::UglySerializationHelperRole - only use this if you know what you're doing
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,8 @@
 Revision history for Data::MultiValued
 
+0.0.1_3   2011-12-05 18:30:47 Europe/London
+  - use Pod::Weaver
+
 0.0.1_2   2011-11-30 11:01:47 Europe/London
   - remove the need for perl 5.12
 

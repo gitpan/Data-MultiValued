@@ -1,6 +1,6 @@
 package Data::MultiValued::Exceptions;
 {
-  $Data::MultiValued::Exceptions::VERSION = '0.0.1_2';
+  $Data::MultiValued::Exceptions::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::Exceptions::DIST = 'Data-MultiValued';
@@ -11,7 +11,7 @@ package Data::MultiValued::Exceptions;
 
 package Data::MultiValued::Exceptions::NotFound;
 {
-  $Data::MultiValued::Exceptions::NotFound::VERSION = '0.0.1_2';
+  $Data::MultiValued::Exceptions::NotFound::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::Exceptions::NotFound::DIST = 'Data-MultiValued';
@@ -37,7 +37,7 @@ sub as_string {
 
 package Data::MultiValued::Exceptions::TagNotFound;
 {
-  $Data::MultiValued::Exceptions::TagNotFound::VERSION = '0.0.1_2';
+  $Data::MultiValued::Exceptions::TagNotFound::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::Exceptions::TagNotFound::DIST = 'Data-MultiValued';
@@ -53,7 +53,7 @@ has '+message' => (
 
 package Data::MultiValued::Exceptions::RangeNotFound;
 {
-  $Data::MultiValued::Exceptions::RangeNotFound::VERSION = '0.0.1_2';
+  $Data::MultiValued::Exceptions::RangeNotFound::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::Exceptions::RangeNotFound::DIST = 'Data-MultiValued';
@@ -69,7 +69,7 @@ has '+message' => (
 
 package Data::MultiValued::Exceptions::BadRange;
 {
-  $Data::MultiValued::Exceptions::BadRange::VERSION = '0.0.1_2';
+  $Data::MultiValued::Exceptions::BadRange::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::Exceptions::BadRange::DIST = 'Data-MultiValued';
@@ -98,13 +98,15 @@ sub as_string {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::Exceptions - exception classes
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 

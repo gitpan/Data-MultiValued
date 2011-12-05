@@ -1,6 +1,6 @@
 package Data::MultiValued::TagContainerForRanges;
 {
-  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_2';
+  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::TagContainerForRanges::DIST = 'Data-MultiValued';
@@ -57,13 +57,15 @@ sub _as_hash {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::TagContainerForRanges - container for tagged values that are ranged containers
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 

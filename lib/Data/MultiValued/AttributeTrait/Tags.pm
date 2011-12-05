@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeTrait::Tags;
 {
-  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_2';
+  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::AttributeTrait::Tags::DIST = 'Data-MultiValued';
@@ -18,7 +18,7 @@ sub opts_to_pass_get { qw(tag) }
 
 package Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags;
 {
-  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_2';
+  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_3';
 }
 {
   $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::DIST = 'Data-MultiValued';
@@ -31,13 +31,15 @@ sub register_implementation { 'Data::MultiValued::AttributeTrait::Tags' }
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::AttributeTrait::Tags - attribute traits for attributes holding tagged values
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 SYNOPSIS
 

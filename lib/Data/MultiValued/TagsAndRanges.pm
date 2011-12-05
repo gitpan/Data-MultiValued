@@ -1,6 +1,6 @@
 package Data::MultiValued::TagsAndRanges;
 {
-  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_2';
+  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::TagsAndRanges::DIST = 'Data-MultiValued';
@@ -93,13 +93,15 @@ sub _as_hash {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::TagsAndRanges - Handle values with tags and validity ranges
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 SYNOPSIS
 

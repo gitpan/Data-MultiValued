@@ -30,3 +30,4 @@ t/release-pod-syntax.t
 t/simple-setting.t
 t/tags-ranges-setting.t
 t/tags-setting.t
+weaver.ini

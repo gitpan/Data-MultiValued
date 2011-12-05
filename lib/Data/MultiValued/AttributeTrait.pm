@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeTrait;
 {
-  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_2';
+  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::AttributeTrait::DIST = 'Data-MultiValued';
@@ -279,13 +279,15 @@ sub _as_hash {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::AttributeTrait - "base role" for traits of multi-valued Moose attributes
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 
@@ -298,7 +300,7 @@ This role (together with L<Data::MultiValued::AttributeAccessors>)
 defines all the basic plumbing to glue C<Data::MultiValued::Tags> etc
 into Moose attributes.
 
-=head1 Implementation details
+=head2 Implementation details
 
 The multi-value object is stored in the instance slot named by the
 L</full_storage_slot> attribute attribute. C<before> modifiers on
@@ -306,10 +308,10 @@ getters load the appropriate value from the multi-value object into
 the regular instance slot, C<after> modifiers on setters store the
 value from the regular instance slot into the multi-value object.
 
-=head1 ATTRIBUTES
+=head2 Attributes
 
-These are the attributes that this trait adds to the attribute in
-your class. Example:
+This trait adds some attributes to the attribute declarations in your
+class. Example:
 
   has stuff => (
     is => 'rw',
@@ -319,6 +321,8 @@ your class. Example:
     multi_accessor => 'stuff_tagged',
     multi_predicate => 'has_stuff_tagged',
   );
+
+=head1 ATTRIBUTES
 
 =head2 C<full_storage_slot>
 
@@ -348,25 +352,6 @@ non-multi accessor. So, for example,
 
 will create a C<stuff> read / write accessor and a C<stuff_multi> read
 / write tagged accessor.
-
-=head1 REQUIREMENTS
-
-These methods must be provided by any class consuming this role. See
-L<Data::MultiValued::AttributeTrait::Tags> etc. for examples.
-
-=head2 C<multivalue_storage_class>
-
-The class to use to create the multi-value objects.
-
-=head2 C<opts_to_pass_set>
-
-Which options to pass from the multi-value accessors to the C<set>
-method of the multi-value object.
-
-=head2 C<opts_to_pass_get>
-
-Which options to pass from the multi-value accessors to the C<get>
-method of the multi-value object.
 
 =head1 METHODS
 
@@ -469,6 +454,25 @@ Call the C<clear> method on the multi-value object.
 
 Return the name of the reader or writer method, honoring
 L</multi_reader>, L</multi_writer> and L</multi_accessor>.
+
+=head1 REQUIREMENTS
+
+These methods must be provided by any class consuming this role. See
+L<Data::MultiValued::AttributeTrait::Tags> etc. for examples.
+
+=head2 C<multivalue_storage_class>
+
+The class to use to create the multi-value objects.
+
+=head2 C<opts_to_pass_set>
+
+Which options to pass from the multi-value accessors to the C<set>
+method of the multi-value object.
+
+=head2 C<opts_to_pass_get>
+
+Which options to pass from the multi-value accessors to the C<get>
+method of the multi-value object.
 
 =head1 Serialisation helpers
 

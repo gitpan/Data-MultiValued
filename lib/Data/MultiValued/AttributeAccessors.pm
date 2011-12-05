@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeAccessors;
 {
-  $Data::MultiValued::AttributeAccessors::VERSION = '0.0.1_2';
+  $Data::MultiValued::AttributeAccessors::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::AttributeAccessors::DIST = 'Data-MultiValued';
@@ -122,20 +122,22 @@ sub _generate_multi_clearer_method {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::AttributeAccessors - method meta-class for multi-valued attribute accessors
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 
 Subclass of L<Moose::Meta::Method::Accessor>, generates non-inlined
 (patches welcome) accessors for multi-valued attributes.
 
-=head1 METHDOS
+=head1 METHODS
 
 =head2 C<_instance_is_inlinable>
 

@@ -1,6 +1,6 @@
 package Data::MultiValued::RangeContainer;
 {
-  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_2';
+  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_3';
 }
 {
   $Data::MultiValued::RangeContainer::DIST = 'Data-MultiValued';
@@ -237,13 +237,15 @@ sub all_ranges {
 __END__
 =pod
 
+=encoding utf-8
+
 =head1 NAME
 
 Data::MultiValued::RangeContainer - container for ranged values
 
 =head1 VERSION
 
-version 0.0.1_2
+version 0.0.1_3
 
 =head1 DESCRIPTION
 
