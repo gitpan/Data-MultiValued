@@ -1,11 +1,12 @@
 package Data::MultiValued::TagContainerForRanges;
 {
-  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_3';
+  $Data::MultiValued::TagContainerForRanges::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::TagContainerForRanges::DIST = 'Data-MultiValued';
 }
 use Moose;
+use namespace::autoclean;
 use MooseX::Types::Moose qw(HashRef);
 use Moose::Util::TypeConstraints;
 use Data::MultiValued::RangeContainer;
@@ -52,6 +53,8 @@ sub _as_hash {
     };
 }
 
+__PACKAGE__->meta->make_immutable();
+
 1;
 
 __END__
@@ -65,7 +68,7 @@ Data::MultiValued::TagContainerForRanges - container for tagged values that are 
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 

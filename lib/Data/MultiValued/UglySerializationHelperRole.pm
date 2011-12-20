@@ -1,11 +1,12 @@
 package Data::MultiValued::UglySerializationHelperRole;
 {
-  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_3';
+  $Data::MultiValued::UglySerializationHelperRole::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::UglySerializationHelperRole::DIST = 'Data-MultiValued';
 }
 use Moose::Role;
+use namespace::autoclean;
 
 # ABSTRACT: only use this if you know what you're doing
 
@@ -56,7 +57,7 @@ Data::MultiValued::UglySerializationHelperRole - only use this if you know what 
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 SYNOPSIS
 

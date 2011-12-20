@@ -1,5 +1,9 @@
 Revision history for Data::MultiValued
 
+0.0.1_4   2011-12-20 10:02:30 Europe/London
+  - don't use Throwable::Error, we don't need stack traces, and they
+    leak all over the place
+
 0.0.1_3   2011-12-05 18:30:47 Europe/London
   - use Pod::Weaver
 

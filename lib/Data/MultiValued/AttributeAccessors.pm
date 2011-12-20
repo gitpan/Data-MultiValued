@@ -1,6 +1,6 @@
 package Data::MultiValued::AttributeAccessors;
 {
-  $Data::MultiValued::AttributeAccessors::VERSION = '0.0.1_3';
+  $Data::MultiValued::AttributeAccessors::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::AttributeAccessors::DIST = 'Data-MultiValued';
@@ -130,7 +130,7 @@ Data::MultiValued::AttributeAccessors - method meta-class for multi-valued attri
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 

@@ -1,11 +1,12 @@
 package Data::MultiValued::TagsAndRanges;
 {
-  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_3';
+  $Data::MultiValued::TagsAndRanges::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::TagsAndRanges::DIST = 'Data-MultiValued';
 }
 use Moose;
+use namespace::autoclean;
 use MooseX::Params::Validate;
 use Moose::Util::TypeConstraints;
 use MooseX::Types::Moose qw(Num Str Undef Any);
@@ -88,6 +89,8 @@ sub _as_hash {
     return {_storage=>$ret};
 }
 
+__PACKAGE__->meta->make_immutable();
+
 1;
 
 __END__
@@ -101,7 +104,7 @@ Data::MultiValued::TagsAndRanges - Handle values with tags and validity ranges
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 SYNOPSIS
 

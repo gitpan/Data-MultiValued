@@ -1,11 +1,12 @@
 package Data::MultiValued::AttributeTrait::Tags;
 {
-  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_3';
+  $Data::MultiValued::AttributeTrait::Tags::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::AttributeTrait::Tags::DIST = 'Data-MultiValued';
 }
 use Moose::Role;
+use namespace::autoclean;
 use Data::MultiValued::Tags;
 with 'Data::MultiValued::AttributeTrait';
 
@@ -18,7 +19,7 @@ sub opts_to_pass_get { qw(tag) }
 
 package Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags;
 {
-  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_3';
+  $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::VERSION = '0.0.1_4';
 }
 {
   $Moose::Meta::Attribute::Custom::Trait::MultiValued::Tags::DIST = 'Data-MultiValued';
@@ -39,7 +40,7 @@ Data::MultiValued::AttributeTrait::Tags - attribute traits for attributes holdin
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 SYNOPSIS
 

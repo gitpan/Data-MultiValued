@@ -1,11 +1,12 @@
 package Data::MultiValued::RangeContainer;
 {
-  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_3';
+  $Data::MultiValued::RangeContainer::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::RangeContainer::DIST = 'Data-MultiValued';
 }
 use Moose;
+use namespace::autoclean;
 use Moose::Util::TypeConstraints;
 use MooseX::Types::Moose qw(Num Str Any Undef ArrayRef);
 use MooseX::Types::Structured qw(Dict);
@@ -232,6 +233,8 @@ sub all_ranges {
     return map { [ $_->{from}, $_->{to} ] } @{$self->_storage};
 }
 
+__PACKAGE__->meta->make_immutable();
+
 1;
 
 __END__
@@ -245,7 +248,7 @@ Data::MultiValued::RangeContainer - container for ranged values
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 

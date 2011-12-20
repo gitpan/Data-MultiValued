@@ -1,11 +1,12 @@
 package Data::MultiValued::TagContainer;
 {
-  $Data::MultiValued::TagContainer::VERSION = '0.0.1_3';
+  $Data::MultiValued::TagContainer::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::TagContainer::DIST = 'Data-MultiValued';
 }
 use Moose;
+use namespace::autoclean;
 use Moose::Util::TypeConstraints;
 use MooseX::Types::Moose qw(HashRef);
 use Data::MultiValued::Exceptions;
@@ -110,6 +111,8 @@ sub _create_new_inferior {
     return {};
 }
 
+__PACKAGE__->meta->make_immutable();
+
 1;
 
 __END__
@@ -123,7 +126,7 @@ Data::MultiValued::TagContainer - container for tagged values
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 

@@ -1,6 +1,6 @@
 package Data::MultiValued::Exceptions;
 {
-  $Data::MultiValued::Exceptions::VERSION = '0.0.1_3';
+  $Data::MultiValued::Exceptions::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::Exceptions::DIST = 'Data-MultiValued';
@@ -11,13 +11,21 @@ package Data::MultiValued::Exceptions;
 
 package Data::MultiValued::Exceptions::NotFound;
 {
-  $Data::MultiValued::Exceptions::NotFound::VERSION = '0.0.1_3';
+  $Data::MultiValued::Exceptions::NotFound::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::Exceptions::NotFound::DIST = 'Data-MultiValued';
 }{
 use Moose;
-extends 'Throwable::Error';
+with 'Throwable';
+use overload
+  q{""}    => 'as_string',
+  fallback => 1;
+
+has message => (
+    is => 'ro',
+    required => 1,
+);
 
 has value => (
     is => 'ro',
@@ -28,7 +36,6 @@ sub as_string {
     my ($self) = @_;
 
     my $str = $self->message . ($self->value // '<undef>');
-    $str .= "\n\n" . $self->stack_trace->as_string;
 
     return $str;
 }
@@ -37,7 +44,7 @@ sub as_string {
 
 package Data::MultiValued::Exceptions::TagNotFound;
 {
-  $Data::MultiValued::Exceptions::TagNotFound::VERSION = '0.0.1_3';
+  $Data::MultiValued::Exceptions::TagNotFound::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::Exceptions::TagNotFound::DIST = 'Data-MultiValued';
@@ -53,7 +60,7 @@ has '+message' => (
 
 package Data::MultiValued::Exceptions::RangeNotFound;
 {
-  $Data::MultiValued::Exceptions::RangeNotFound::VERSION = '0.0.1_3';
+  $Data::MultiValued::Exceptions::RangeNotFound::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::Exceptions::RangeNotFound::DIST = 'Data-MultiValued';
@@ -69,24 +76,23 @@ has '+message' => (
 
 package Data::MultiValued::Exceptions::BadRange;
 {
-  $Data::MultiValued::Exceptions::BadRange::VERSION = '0.0.1_3';
+  $Data::MultiValued::Exceptions::BadRange::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::Exceptions::BadRange::DIST = 'Data-MultiValued';
 }{
 use Moose;
-extends 'Throwable::Error';
+with 'Throwable';
+use overload
+  q{""}    => 'as_string',
+  fallback => 1;
 
 has ['from','to'] => ( is => 'ro', required => 1 );
-has '+message' => (
-    default => 'invalid range: ',
-);
 
 sub as_string {
     my ($self) = @_;
 
-    my $str = $self->message . $self->from . ', ' . $self->to;
-    $str .= "\n\n" . $self->stack_trace->as_string;
+    my $str = 'invalid range: ' . $self->from . ', ' . $self->to;
 
     return $str;
 }
@@ -106,7 +112,7 @@ Data::MultiValued::Exceptions - exception classes
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 
@@ -127,16 +133,12 @@ tags. Stringifies to:
 
   tag not found: $value
 
-  $stack_trace
-
 =head2 C<Data::MultiValued::Exceptions::RangeNotFound>
 
 Subclass of L</Data::MultiValued::Exceptions::NotFound>, for
 ranges. Stringifies to:
 
   no range found for value: $value
-
-  $stack_trace
 
 =head2 C<Data::MultiValued::Exceptions::BadRange>
 
@@ -146,8 +148,6 @@ is a range with C<from> greater than C<to>.
 Stringifies to:
 
   invalid range: $from, $to
-
-  $stack_trace
 
 =head1 AUTHOR
 

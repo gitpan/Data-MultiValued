@@ -1,11 +1,12 @@
 package Data::MultiValued::AttributeTrait::TagsAndRanges;
 {
-  $Data::MultiValued::AttributeTrait::TagsAndRanges::VERSION = '0.0.1_3';
+  $Data::MultiValued::AttributeTrait::TagsAndRanges::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::AttributeTrait::TagsAndRanges::DIST = 'Data-MultiValued';
 }
 use Moose::Role;
+use namespace::autoclean;
 use Data::MultiValued::TagsAndRanges;
 with 'Data::MultiValued::AttributeTrait';
 
@@ -18,7 +19,7 @@ sub opts_to_pass_get { qw(at tag) }
 
 package Moose::Meta::Attribute::Custom::Trait::MultiValued::TagsAndRanges;
 {
-  $Moose::Meta::Attribute::Custom::Trait::MultiValued::TagsAndRanges::VERSION = '0.0.1_3';
+  $Moose::Meta::Attribute::Custom::Trait::MultiValued::TagsAndRanges::VERSION = '0.0.1_4';
 }
 {
   $Moose::Meta::Attribute::Custom::Trait::MultiValued::TagsAndRanges::DIST = 'Data-MultiValued';
@@ -39,7 +40,7 @@ Data::MultiValued::AttributeTrait::TagsAndRanges - attribute traits for attribut
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 SYNOPSIS
 

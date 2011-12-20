@@ -1,11 +1,12 @@
 package Data::MultiValued::AttributeTrait;
 {
-  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_3';
+  $Data::MultiValued::AttributeTrait::VERSION = '0.0.1_4';
 }
 {
   $Data::MultiValued::AttributeTrait::DIST = 'Data-MultiValued';
 }
 use Moose::Role;
+use namespace::autoclean;
 use Data::MultiValued::AttributeAccessors;
 use MooseX::Types::Moose qw(Str);
 use Try::Tiny;
@@ -287,7 +288,7 @@ Data::MultiValued::AttributeTrait - "base role" for traits of multi-valued Moose
 
 =head1 VERSION
 
-version 0.0.1_3
+version 0.0.1_4
 
 =head1 DESCRIPTION
 
